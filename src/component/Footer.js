@@ -23,10 +23,10 @@ class Footer extends Component {
   render() {
     return (
       <div>
-       <footer className="p-2">
+       <footer className="p-4">
            <div className="container-fluid">
                <div className="row align-items-center">
-                   <div className="col-md-7 col-sm-12">
+                   <div className="col-sm-12">
                     {/* <Nav className="ml-auto" navbar>
                         <NavItem>
                             <Link to="/">Home</Link>
@@ -44,16 +44,9 @@ class Footer extends Component {
                             <Link to="/contactus">Contact us</Link>
                         </NavItem>
                     </Nav> */}
-                    <p className="font-12 mb-0">Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2018&nbsp;&nbsp;Demo.com</p>
+                    <p className="font-12 mb-0 text-center">Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2018&nbsp;&nbsp;happiestweddings.com</p>
                    </div>
-                   <div className="col-md-5 col-sm-12">
-                       <ul className="d-flex justify-content-end no-list-style mb-0">
-                           <li className="mr-2"><a href=""><i className="fab fa-2x fa-facebook-square"></i></a></li>
-                           <li className="mr-2"><a href=""><i className="fab fa-2x fa-twitter-square"></i></a></li>
-                           <li className="mr-2"><a href=""><i className="fab fa-2x fa-instagram"></i></a></li>
-                           <li className=""><a href=""><i className="fab fa-2x fa-youtube"></i></a></li>
-                       </ul>
-                   </div>
+                   
                </div>
            </div>
        </footer>

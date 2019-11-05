@@ -9,60 +9,56 @@ import { createSecureContext } from "tls";
 
 
 class Galleryslide extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      originalArray: []
-    }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     originalArray: []
+  //   }
+  // }
+  state={
+    serviceImagesData:[]
   }
-  
   componentDidMount() {
     axios("https://api.imgur.com/3/account/me/images")
-      .then(data => {
-        const galleryImageUrl = data.data.data;
+      .then( data => {
+        const imageList = data.data.data;
         this.setState({
-          galleryImages: galleryImageUrl.map(data => data)
+          // serviceImagesData: imageUrl.map(data => data).slice(0,3)
+          serviceImagesData:imageList.map( data => data )
         });
-        const dataImage = this.state.srcurl;
-        var photos = [];
-        dataImage.forEach(element => {
-          // var x = [];
-          // x['src'] = element;
-          // x['width'] = 4;
-          // x['height'] = 3;
-          var x = {
-            src: element,
-            width: 4,
-            height: 3,
-          };
-        photos.push(x);
-        });
-        console.log(photos);
+        console.log( imageList );
       })
       .catch(err => {
         console.log("error");
       });
   }
 
+
   render() {
-    return (
-      
-      <section className="gallery-wrap mb-4">
-        <Gallery photos={photos} />
-        {/* {this.state.serviceImages.map(data => (
-          
-          <Col sm="6" md="3" xl="2">
-            <img className="img-fluid" src={data.link}></img>
-            <Link className="d-flex align-items-center justify-content-center" to="/services">Decor &amp; Designs</Link >
+    const { serviceImagesData } = this.state;
+    const serviceImages = serviceImagesData.length ? (
+      serviceImagesData.map((data, index) => {
+        return(
+          <Col sm="6" md="3">
+            <div className="gal-wrap">
+              <img className="" src={data.link}></img>
+              {/* <Link className="d-flex align-items-center justify-content-center" to="/services">Decor &amp; Designs</Link > */}
+            </div>
           </Col>
-          
-        ))} */}
-
-      
-
-
-      </section>
-    );
+        )
+      })
+      ):(
+      <div className="col-12 text-center">Images Not Yet Loaded</div>
+      )
+      return(
+        <section className="gallery-wrap mb-4">
+          <Container fluid>
+          <Row className="form-row">
+          { serviceImages }
+          </Row>
+          </Container>
+        </section>
+      )
   }
 }
 

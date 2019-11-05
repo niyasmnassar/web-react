@@ -33,9 +33,10 @@ class HomeCatlist extends Component {
         const imageList = data.data.data;
         this.setState({
           // serviceImagesData: imageUrl.map(data => data).slice(0,3)
-          serviceImagesData:imageList.map( data => data ).slice(0,3)
+          serviceImagesData:imageList.map( data => data ).slice(1,4)
         });
         console.log( imageList );
+        
       })
       .catch(err => {
         console.log("error");
@@ -50,13 +51,11 @@ class HomeCatlist extends Component {
         <div className="col-md-4 col-sm-12 mb-3 services-cat position-relative">
           <div className="img-wrap">
             <img key={data.key} src={data.link} />
-            <div className="layer-wrap d-flex align-items-center text-center">
               <Link
                 className="d-flex align-items-center justify-content-center"
                 to="/services" onClick={() => this.viewMatchSummary(this.props.data)
                 }
               >{data.title}</Link>
-            </div>
           </div>
         </div>
       )

@@ -31,14 +31,6 @@ class Banner extends Component {
       .catch(err => {
         console.log("error");
       });
-    // window.onscroll = function() {
-    //   var currentScrollPos = window.pageYOffset;
-    //   if (currentScrollPos > 100) {
-    //     document.getElementById("fixed-nav").classList.add("bgtrans");
-    //   } else {
-    //     document.getElementById("fixed-nav").classList.remove("bgtrans");
-    //   }
-    // };
 
     // function resize() {
     //   var heights = window.innerHeight;
@@ -54,10 +46,12 @@ class Banner extends Component {
     const { imageURL } = this.state;
     const { height } = window.innerHeight;
     var settings = {
+      fade:true,
+      auto:true,
       dots: false,
       arrows: true,
       infinite: true,
-      speed: 500,
+      speed: 1000,
       slidesToShow: 1,
       slidesToScroll: 1,
       nextArrow: <SampleNextArrow />,
