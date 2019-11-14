@@ -17,7 +17,7 @@ header{
     }
     .harmburgermenu{
       &::before{
-        color: #000;
+        color: #952472;
       }
     }
   }
@@ -239,6 +239,9 @@ nav {
       font-size: 1.5625rem;
     }
   }
+  .banner-bg{
+    background: #952472;
+  }
   .bg-banner{
     background-size: cover;
     background-position: center top;
@@ -266,8 +269,8 @@ nav {
   background-position: center !important; 
 }
 
-.height-250{
-  height: 250px;
+.height-350{
+  height: 350px;
 }
 a{
   &.readmore{
@@ -399,11 +402,63 @@ a{
     margin-bottom: 10px;
     @media (min-width: 768px) {
       img{
-        height: 230px;
+        // height: 230px;
+        width: 100%;
       }
     }
   }
   
+}
+.contact-wrap{
+  .columns{
+    font-size: 13px;
+    input[type="text"]{
+    border: none;
+    background: transparent;
+    width: 100px;
+    text-align: center;
+    color:#9e2679;
+    }
+    &.bg-grey{
+      background: #fff;
+    }
+    .submit{
+      background-color: transparent;
+      color: #9e2679;
+      font-size: 14px;
+      padding: 10px 25px;
+      border: 1px solid #9e2679;;
+      border-radius: 5px;
+      position: relative;
+      overflow: hidden;
+
+      span{
+        position: relative;
+        z-index: 2;
+      }
+      &:before{
+        content: "";
+        width:0%;
+        transition: width 0.2s ease-in-out;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top:0px;
+        z-index: 1;
+      }
+      &:hover{
+        span{
+          color:#fff;
+        }
+        &:before{
+          background-color:#9e2679; ;
+          color:#fff;
+          width: 100%;
+        }
+      }
+      
+    }
+  }
 }
 footer{
 

@@ -19,6 +19,8 @@ import Carousel from 'react-images';
 import BackgroundHeader from "./images/party.png";
 import aboutImg from "./images/party.png";
 import axios from "axios";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 class Home extends Component {
   constructor(props) {
@@ -44,6 +46,10 @@ class Home extends Component {
         console.log("error");
       });
 
+      AOS.init({
+        duration : 2000
+      })
+
     // console.log(window.innerHeight);
   }
 
@@ -56,9 +62,9 @@ class Home extends Component {
           <Container>
             <div className="row">
               <div className="col-md-9 m-auto text-center">
-                <h3 className="pb-2">About Us</h3>
-                <p className="pb-2 mb-0">{this.state.aboutDesc}</p>
-                <Link className="readmore my-2" to="/about">Read More</Link>
+                <h3 className="pb-2" data-aos='fade-up'>About Us</h3>
+                <p className="pb-2 mb-0" data-aos='fade-up'>{this.state.aboutDesc}</p>
+                <Link className="readmore my-2" to="/about" data-aos='fade-up'>Read More</Link>
               </div>
             </div>
           </Container>

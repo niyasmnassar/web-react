@@ -48,7 +48,7 @@ class HomeCatlist extends Component {
     const serviceImages = serviceImagesData.length ? (
       serviceImagesData.map((data, index) => {
         return(
-        <div className="col-md-4 col-sm-12 mb-3 services-cat position-relative">
+        <div data-aos='fade-down' className="col-md-4 col-sm-12 mb-3 services-cat position-relative">
           <div className="img-wrap">
             <img key={data.key} src={data.link} />
               <Link

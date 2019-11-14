@@ -25,6 +25,7 @@ class SubBanner extends Component {
   }
   componentDidMount() {
     axios("https://api.imgur.com/3/account/me/about/")
+    
       .then(data => {
         const contentTitle = data.data.data.url;
         const contentTxt = data.data.data.bio;
@@ -48,7 +49,7 @@ class SubBanner extends Component {
     return (
       <div>
         <section
-          className="mb-4 sub-banner center-position height-250 d-flex flex-column justify-content-center align-items-center"
+          className="mb-4 sub-banner center-position height-350 d-flex flex-column justify-content-center align-items-center"
           style={{ backgroundImage: `url(${bannerBg})` }}
         ></section>
       </div>

@@ -2,28 +2,29 @@ import React ,{Component}from 'react';
 import { Jumbotron, Container, Button,InputGroup, InputGroupAddon, Input, Card } from 'reactstrap';
 import SubBanner from "./SubBanner" ;
 import axios from "axios";
+// import jsonResponse from ""
 import { createSecureContext } from "tls";
 class About extends Component {
-  // constructor (props) {
-  //   super(props);
-  //   this.state = {
-  //     isFetching: false,
-  //     aboutData: []
-  //   };
-  //   // this.myRef = React.createRef();
-  // }
-  state={
-    aboutData:[]
+  constructor (props) {
+    
+    super(props);
+    this.state = {
+      isFetching: false,
+      aboutData: []
+    };
+    // this.myRef = React.createRef();
   }
+  
   componentDidMount() {
-    axios("https://api.imgur.com/3/account/me/about/")
-      .then( data => {
-        const imageList = data.data.data;
+    axios("../data/sliders.json")
+      .then( res => {
+        const imageList = res.data;
         this.setState({
           // serviceImagesData: imageUrl.map(data => data).slice(0,3)
-          aboutData:imageList.map( data => data )
+          aboutData:imageList.map( res => res )
         });
         console.log( imageList );
+        
       })
       .catch(err => {
         console.log("error");
@@ -33,15 +34,16 @@ class About extends Component {
     render() {
       const { aboutData } = this.state;
       const aboutContents = aboutData.length ? (
-        aboutData.map( data => {
+        aboutData.map((res) => {
         return (
         <div className="col-md-4">
           <div className="card">
-            <img src={data.avatar} className="card-img-top" alt="avatar"></img>
+            <div className="img-wrap p-4">
+              <img key={res.id} src={'../assets/images/' + res.profilePic} className="card-img-top" alt="avatar"></img>
+            </div>
             <div className="card-body">
-              <h5 className="card-title">{data.url}</h5>
-              <p className="card-text">{data.bio}</p>
-              
+              <h5 className="card-title">{res.title}</h5>
+              <p className="card-text">{res.body}</p>
             </div>
           </div>
         </div>
