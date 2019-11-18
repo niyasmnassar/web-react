@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e436fd52.chunk.css",
+    "main.js": "/static/js/main.e637ad56.chunk.js",
+    "main.js.map": "/static/js/main.e637ad56.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.5134c318.js",
+    "runtime~main.js.map": "/static/js/runtime~main.5134c318.js.map",
+    "static/css/2.cfb30d30.chunk.css": "/static/css/2.cfb30d30.chunk.css",
+    "static/js/2.10b8c399.chunk.js": "/static/js/2.10b8c399.chunk.js",
+    "static/js/2.10b8c399.chunk.js.map": "/static/js/2.10b8c399.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.d20e3f2ef8fb6e266b5b0c3a220c768d.js": "/precache-manifest.d20e3f2ef8fb6e266b5b0c3a220c768d.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.cfb30d30.chunk.css.map": "/static/css/2.cfb30d30.chunk.css.map",
+    "static/css/main.e436fd52.chunk.css.map": "/static/css/main.e436fd52.chunk.css.map",
+    "static/media/party.png": "/static/media/party.82ad9ce3.png",
+    "static/media/slick-theme.css": "/static/media/slick.f97e3bbf.svg"
+  }
+}

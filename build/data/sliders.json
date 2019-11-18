@@ -1,0 +1,23 @@
+[
+    {
+    "userId": 1,
+    "id": 1,
+    "title": "Creative Head",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+    "profilePic": "male-user-profile-picture.svg"
+    },
+    {
+    "userId": 1,
+    "id": 2,
+    "title": "Event Planner / Organizer",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+    "profilePic": "male-user-profile-picture.svg"
+    },
+    {
+    "userId": 1,
+    "id": 2,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+    "profilePic": "male-user-profile-picture.svg"
+    }
+]

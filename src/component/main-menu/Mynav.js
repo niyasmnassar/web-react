@@ -65,7 +65,7 @@ componentDidMount(){
                     <li className="mr-2"><a href=""><i className="fab fa-2x fa-facebook-square"></i></a></li>
                     <li className="mr-2"><a href=""><i className="fab fa-2x fa-twitter-square"></i></a></li>
                     <li className="mr-2"><a href=""><i className="fab fa-2x fa-instagram"></i></a></li>
-                    <li className="mr-2"><a href=""><i className="fab fa-2x fa-whatsapp"></i></a></li>
+                    <li className="mr-2"><a href="//api.whatsapp.com/send?phone=919746150416"><i className="fab fa-2x fa-whatsapp"></i></a></li>
                     <li className=""><a href=""><i className="fab fa-2x fa-youtube"></i></a></li>
                   </ul>
               </div>

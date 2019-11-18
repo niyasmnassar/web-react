@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900&display=swap");
-body {
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap');
+h1,h2,h3,h4,h5,p,span,a{
   font-family: "Noto Sans JP", sans-serif;
+}
+body {
+  font-family: 'Noto Sans', sans-serif;
   background-color: rgb(239, 239, 239);
 }
 section {
@@ -285,6 +289,7 @@ a{
   }
 }
 .about-home{
+  background: #fff;
   p{
     font-size: 14px;
   }
@@ -305,26 +310,56 @@ a{
     .img-wrap{
       overflow: hidden;
       position: relative;
+      background: #94448e;
+      &:before{
+        content: " ";
+        display: block;
+        opacity: 0;
+        -webkit-transform: scale(0,1);
+        transform: scale(0,1);
+        position: absolute;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        -webkit-transition: opacity 0.35s, 
+        -webkit-transform 0.35s;
+        transition: opacity 0.35s, 
+        transform 0.35s;
+        width: calc(100% - 40px);
+        height: calc(100% - 40px);
+        top: 20px;
+        right: 20px;
+        bottom: 20px;
+        left: 20px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
       &:after{
         content: " ";
         display: block;
-        background-color: rgba(125, 48, 99, 1);
         opacity: 0;
         position: absolute;
-        -webkit-transform: scale(.9);
-        transform: scale(.9);
-        -webkit-transition: all .3s ease-in-out;
-        transition: all .3s ease-in-out;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
+        -webkit-transition: opacity 0.35s, 
+        -webkit-transform 0.35s;
+        border-right: 1px solid #fff;
+        border-left: 1px solid #fff;
+
+        -webkit-transition: opacity 0.35s, 
+        -webkit-transform 0.35s;
+        transition: opacity 0.35s, 
+        transform 0.35s;
+        width: calc(100% - 40px);
+        height: calc(100% - 40px);
+        top: 20px;
+        right: 20px;
+        bottom: 20px;
+        left: 20px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
       }
       a{
         width: 100%;
         height: 100%;
         color: #fff;
-        font-weight: 500;
         margin-bottom: 5px;
         line-height: 1;
         -webkit-transition: all .4s ease-in-out;
@@ -340,7 +375,12 @@ a{
       }
       &:hover{
         &::after{
-          opacity: .9;
+          opacity: 1;
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+        &::before{
+          opacity: 1;
           -webkit-transform: scale(1);
           transform: scale(1);
         }
@@ -364,6 +404,7 @@ a{
       &:hover{
         img{
         transform: scale(1.1);
+        opacity: 0.5;
         }
       } 
     }
@@ -377,6 +418,7 @@ a{
   }
 }
 .gallery-wrap{
+  background: #fff;
   .row {
     display: -ms-flexbox; /* IE 10 */
     display: flex;
@@ -415,7 +457,7 @@ a{
     input[type="text"]{
     border: none;
     background: transparent;
-    width: 100px;
+    width: 80px;
     text-align: center;
     color:#9e2679;
     }
@@ -431,7 +473,6 @@ a{
       border-radius: 5px;
       position: relative;
       overflow: hidden;
-
       span{
         position: relative;
         z-index: 2;
@@ -460,12 +501,26 @@ a{
     }
   }
 }
-footer{
-
-  color: #7d3063;
-  p{
-    font-size: 14px;
+h3{
+  &.bar-title{
+    span{
+      font-weight: 300;
+    }
+    &:before{
+      content: "";
+      width: 5px;
+      height: 22px;
+      background: #943b9e;
+      display: inline-block;
+      margin-right: 5px;
+    }
   }
-  
+}
+footer{
+  .info-txt{
+    p{
+      font-size: 12px;
+    }
+  }
 }
 

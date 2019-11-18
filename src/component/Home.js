@@ -15,7 +15,6 @@ import Banner from "./banner/Banner";
 import HomeCatlist from "./home-category/HomeCatlist";
 import Galleryslide from "./gallery/Galleryslide";
 import Footer from "./Footer" ;
-import Carousel from 'react-images';
 import BackgroundHeader from "./images/party.png";
 import aboutImg from "./images/party.png";
 import axios from "axios";
@@ -58,7 +57,7 @@ class Home extends Component {
       <div>
         <Banner />
         <HomeCatlist />
-        <section className="about-home pb-5">
+        <section className="about-home py-5">
           <Container>
             <div className="row">
               <div className="col-md-9 m-auto text-center">

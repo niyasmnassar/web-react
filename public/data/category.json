@@ -1,0 +1,26 @@
+[
+  {
+    "albumId": 1,
+    "id": 1,
+    "title": "Floral Decoration",
+    "thumbnailUrl": "open-stage.jpg"
+  },
+  {
+    "albumId": 1,
+    "id": 2,
+    "title": "Stage Decorations",
+    "thumbnailUrl": "stage-decor2.jpg"
+  },
+  {
+    "albumId": 1,
+    "id": 3,
+    "title": "Event Management",
+    "thumbnailUrl": "wedding-stage.jpg"
+  },
+  {
+    "albumId": 1,
+    "id": 4,
+    "title": "Catering Services",
+    "thumbnailUrl": "catering.jpg"
+  }
+]

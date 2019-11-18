@@ -1,16 +1,14 @@
 import React, { Component } from "react";
 import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem
+  Jumbotron,
+  Row,
+  Col,
+  Container,
+  Button,
+  InputGroup,
+  InputGroupAddon,
+  Input,
+  Card
 } from "reactstrap";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -23,33 +21,69 @@ class Footer extends Component {
   render() {
     return (
       <div>
-       <footer className="p-4">
-           <div className="container-fluid">
-               <div className="row align-items-center">
-                   <div className="col-sm-12">
-                    {/* <Nav className="ml-auto" navbar>
-                        <NavItem>
-                            <Link to="/">Home</Link>
-                        </NavItem>
-                        <NavItem>
-                            <Link to="/about">About us</Link>
-                        </NavItem>
-                        <NavItem>
-                            <Link to="/ourworks">Our works</Link>
-                        </NavItem>
-                        <NavItem>
-                            <Link to="/services">Services</Link>
-                        </NavItem>
-                        <NavItem>
-                            <Link to="/contactus">Contact us</Link>
-                        </NavItem>
-                    </Nav> */}
-                    <p className="font-12 mb-0 text-center">Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2018&nbsp;&nbsp;happiestweddings.com</p>
-                   </div>
-                   
-               </div>
-           </div>
-       </footer>
+        <footer className="pt-5 pb-2 contact-wrap">
+          <Container fluid>
+            <Row className="overflow-hidden">
+              <Col md="4" sm="12" className="columns" data-aos="fade-right">
+                <div>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15726.864485841474!2d76.4449833!3d9.7900702!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x32d9ee5d42c86d3d!2sHappiest%20Weddings!5e0!3m2!1sen!2sin!4v1573217911385!5m2!1sen!2sin"
+                    width="100%"
+                    height="200"
+                    frameborder="0"
+                    style={{ border: "0" }}
+                    allowfullscreen=""
+                  ></iframe>
+                </div>
+              </Col>
+              <Col
+                md="4"
+                sm="12"
+                className="columns d-flex flex-column justify-content-start pt-3"
+                data-aos="fade-up"
+              >
+                <h5 className="mb-4">Meet us</h5>
+                <p>+919746150416</p>
+                <p>
+                  <i></i>contact@happiestweddings.com
+                </p>
+                <p>
+                  Thalayolaparambu,
+                  <br /> Vaikom, Kottayam, 686605
+                </p>
+              </Col>
+              <Col
+                md="4"
+                sm="12"
+                className="columns d-flex flex-column justify-content-start pt-3"
+                data-aos="fade-left"
+              >
+                <h5 className="mb-4">Pitch us</h5>
+                <p>Hello,</p>
+                <p className="mb-4">
+                  My name is <input type="text" value="your name"></input> and
+                  my e-mail address is
+                  <input type="text" value="your email"></input>and i would like
+                  to discuss about<input type="text" value="my event"></input>{" "}
+                </p>
+                <button
+                  className="submit d-flex align-self-start"
+                  type="submit"
+                  value="Submit"
+                >
+                  <span>SUBMIT</span>
+                </button>
+              </Col>
+            </Row>
+            <Row className="align-items-center">
+              <div className="col-sm-12 info-txt">
+                <p className=" text-center my-3">
+                  Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2018&nbsp;&nbsp;happiestweddings.com
+                </p>
+              </div>
+            </Row>
+          </Container>
+        </footer>
       </div>
     );
   }

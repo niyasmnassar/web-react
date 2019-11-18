@@ -20,13 +20,13 @@ class Banner extends Component {
   }
   componentDidMount() {
     axios
-      .get("https://api.imgur.com/3/account/me/images")
-      .then(data => {
-        const imageUrl = data.data.data;
+      .get("../data/banner.json")
+      .then(res => {
+        const imageUrl = res.data;
         this.setState({
-          bannerDetails: imageUrl.map(data => data)
+          bannerDetails: imageUrl.map(res => res)
         });
-        console.log(data.data.data);
+        console.log(res.request.data);
       })
       .catch(err => {
         console.log("error");
@@ -70,19 +70,19 @@ class Banner extends Component {
     return (
       <section id="banner" className="banner position-relative">
         <Slider {...settings}>
-          {this.state.bannerDetails.map((data, index) => (
+          {this.state.bannerDetails.map((res, index) => (
             <div className="">
               <div
                 className="bg-banner"
                 style={{
-                  backgroundImage: `url(${data.link})`,
+                  backgroundImage: `url(${'../assets/images/banner/' + res.url})`,
                   height: window.innerHeight
                 }}
               >
                 <div className="text-center bnrCont">
                   <div className="col-md-6 m-auto">
-                    <h2 key={'mykey' + index} className="display-3">{data.title}</h2>
-                    <p className="lead">{data.description}</p>
+                    <h2 data-aos="zoom-in" key={'mykey' + index} className="display-3">{res.title}</h2>
+                    <p  data-aos="zoom-in" className="lead">{res.body}</p>
                   </div>
                 </div>
               </div>
