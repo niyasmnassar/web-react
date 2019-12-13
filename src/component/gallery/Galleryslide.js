@@ -18,7 +18,7 @@ class Galleryslide extends Component {
         const imageList = res.data;
         this.setState({
           // serviceImagesData: imageUrl.map(data => data).slice(0,3)
-          galleryData: imageList.map(res => res).slice(0,4)
+          galleryData: imageList.map(res => res).slice(0,8)
         });
         console.log(imageList);
       })
@@ -34,7 +34,7 @@ class Galleryslide extends Component {
     const galleryImages = galleryData.length ? (
       galleryData.map(res => {
         return (
-          <Col md="3" data-aos="flip-left">
+          <Col className="py-1" md="3" data-aos="flip-left">
             <img key={res.id} src={'../assets/images/200x150/' + res.thumbnailUrl} className="card-img-top" alt="avatar"></img>
           </Col>
 

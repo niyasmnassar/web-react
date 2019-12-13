@@ -45,22 +45,22 @@ componentDidMount(){
               </div>
               <button className="closebtn" onClick={() => this.setState({ showing: !showing })}></button>
               <Nav className="h-100 justify-content-center" style={{ width: (showing ? '0'+'px' : '350'+'px') }} navbar>
-              <NavItem>
-                <NavLink exact to="/">Home</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/about">About us</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/ourworks">Our works</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/services">Services</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/contactus">Contact us</NavLink>
-              </NavItem>
-            </Nav>
+                <NavItem>
+                  <NavLink exact to="/">Home</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink to="/about">About us</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink to="/ourworks">Our works</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink to="/services">Services</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink to="/contactus">Contact us</NavLink>
+                </NavItem>
+              </Nav>
                   <ul className="d-flex justify-content-start no-list-style mb-3">
                     <li className="mr-2"><a href=""><i className="fab fa-2x fa-facebook-square"></i></a></li>
                     <li className="mr-2"><a href=""><i className="fab fa-2x fa-twitter-square"></i></a></li>

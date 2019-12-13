@@ -36,7 +36,7 @@ class About extends Component {
       const aboutContents = aboutData.length ? (
         aboutData.map((res) => {
         return (
-        <div className="col-md-4">
+        <div className="col-md-3">
           <div className="card">
             <div className="img-wrap p-4">
               <img key={res.id} src={'../assets/images/' + res.profilePic} className="card-img-top" alt="avatar"></img>
@@ -70,7 +70,7 @@ class About extends Component {
                     <h3>Team Members</h3>
                   </div>
                 </div>
-                <div className="row">
+                <div className="row justify-content-center">
                 { aboutContents }
                 </div>
               </div>
