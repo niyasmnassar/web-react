@@ -2,6 +2,11 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "../../dist/css/animate.min.css"
+import { Animated } from "react-animated-css";
+// import OwlCarousel from "react-owl-carousel2";
+// import "../../dist/css/owl.carousel.css";
+// import "../../dist/css/owl.theme.default.css";
 
 import { Jumbotron, Container } from "reactstrap";
 import axios from "axios";
@@ -32,26 +37,49 @@ class Banner extends Component {
         console.log("error");
       });
 
-    // function resize() {
-    //   var heights = window.innerHeight;
-    //   document.getElementById("banner").style.height = heights + "px";
-    // }
-    // resize();
-    // window.onresize = function() {
-    //   resize();
-    // };
+    function resize() {
+      var heights = window.innerHeight;
+      document.getElementById("banner").style.height = heights + "px";
+    }
+    resize();
+    window.onresize = function() {
+      resize();
+    };
   }
 
   render() {
     const { imageURL } = this.state;
     const { height } = window.innerHeight;
+    // const options = {
+    //   items: 1,
+    //   nav: true,
+    //   rewind: true,
+    //   autoplay: true,
+    //   vertical: true,
+    //   animateOut: "slideOutUp",
+    //   animateIn: "slideInUp"
+    // };
+ 
+    // const events = {
+    //   onDragged: function(event) {
+    //     console.log("onDragged: " + event.type);
+    //   },
+    //   onChanged: function(event) {
+    //     console.log("onChanged: " + event.type);
+    //   },
+    //   onTranslate: function(event) {
+    //     console.log("onTranslate: " + event.type);
+    //   }
+    // };
     var settings = {
-      fade:true,
-      auto:true,
+      fade: true,
+      auto: true,
       dots: false,
       arrows: true,
       infinite: true,
       speed: 1000,
+      vertical: true,
+      verticalSwiping: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       nextArrow: <SampleNextArrow />,
@@ -69,20 +97,50 @@ class Banner extends Component {
 
     return (
       <section id="banner" className="banner position-relative">
-        <Slider {...settings}>
+        {/* <OwlCarousel ref="car" options={options} events={events}>
           {this.state.bannerDetails.map((res, index) => (
-            <div className="">
+            <div
+              className="bg-banner"
+              style={{
+                backgroundImage: `url(${"../assets/images/banner/" + res.url})`,
+                height: window.innerHeight
+              }}
+            >
+              <div className="text-center bnrCont">
+                <div className="col-md-6 m-auto">
+                  <h2 key={"mykey" + index} className="display-3">
+                    {res.title}
+                  </h2>
+                  <p className="lead">{res.body}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </OwlCarousel> */}
+        <Slider {...settings}>
+          {this.state.bannerDetails.map((res, i) => (
+            <div className="" key={i}>
               <div
                 className="bg-banner"
                 style={{
-                  backgroundImage: `url(${'../assets/images/banner/' + res.url})`,
+                  backgroundImage: `url(${"../assets/images/banner/" +
+                    res.url})`,
                   height: window.innerHeight
                 }}
               >
                 <div className="text-center bnrCont">
                   <div className="col-md-6 m-auto">
-                    <h2 data-aos="zoom-in" key={'mykey' + index} className="display-3">{res.title}</h2>
-                    <p  data-aos="zoom-in" className="lead">{res.body}</p>
+                   
+                    <h2
+                      key={"mykey" + i}
+                    >
+                      {res.title}
+                    </h2>
+                   
+                    <p>
+                      {res.body}
+                    </p>
+                   
                   </div>
                 </div>
               </div>

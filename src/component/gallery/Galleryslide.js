@@ -32,17 +32,21 @@ class Galleryslide extends Component {
   render() {
     const { galleryData } = this.state;
     const galleryImages = galleryData.length ? (
-      galleryData.map(res => {
+      galleryData.map((res, i) => {
         return (
-          <Col className="py-1" md="3" data-aos="flip-left">
-            <img key={res.id} src={'../assets/images/200x150/' + res.thumbnailUrl} className="card-img-top" alt="avatar"></img>
+          <Col key={i} className="py-1" md="3" data-aos="flip-left">
+            <img
+              key={res.id}
+              src={"../assets/images/200x150/" + res.thumbnailUrl}
+              className="card-img-top"
+              alt="avatar"
+            ></img>
           </Col>
-
         );
       })
     ) : (
       <div className="col-12 text-center">Contents not loaded yet</div>
-    )
+    );
     return (
       <div>
           <section className="gallery-wrap py-5">

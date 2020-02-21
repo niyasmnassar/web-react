@@ -45,9 +45,9 @@ class HomeCatlist extends Component {
   render() {
     const { categoryData } = this.state;
     const categoryImages = categoryData.length ? (
-      categoryData.map((res, index) => {
+      categoryData.map((res, i) => {
         return (
-          <div
+          <div key={i}
             data-aos="zoom-in"
             className="col-md-3 col-sm-12 col-sm-mb-3 services-cat position-relative"
           >

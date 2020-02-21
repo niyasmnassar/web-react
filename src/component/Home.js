@@ -60,15 +60,35 @@ class Home extends Component {
         <section className="about-home py-5">
           <Container>
             <div className="row">
-              <div className="col-md-9 m-auto text-center">
-                <h3 className="pb-2" data-aos='fade-up'>About Us</h3>
-                <p className="pb-2 mb-0" data-aos='fade-up'>{this.state.aboutDesc}</p>
-                <Link className="readmore my-2" to="/about" data-aos='fade-up'>Read More</Link>
+              <div className="col-md-6 text-left">
+                <h3 className="pb-2 mb-0" data-aos="fade-down">
+                  About Us
+                </h3>
+                <h5 className="pb-1 mb-5" data-aos="fade-left">
+                  Happiest moments with Colour of Joy
+                </h5>
+                <p className="pb-2 mb-0" data-aos="fade-up">
+                  {this.state.aboutDesc}
+                </p>
+                <Link
+                  className="readmore my-2 text-center"
+                  to="/about"
+                  data-aos="fade-up"
+                >
+                  Read More
+                </Link>
+              </div>
+              <div className="col-md-6 text-left">
+                <img
+                  className="w-100"
+                  data-aos="zoom-out"
+                  src="../assets/images/200x150/wedding-stage.jpg"
+                ></img>
               </div>
             </div>
           </Container>
         </section>
-        <Galleryslide/>
+        <Galleryslide />
         {/* <section className="gallery-wrap mb-5">
           <Container>
             <Row className="mb-4">
@@ -83,7 +103,6 @@ class Home extends Component {
             </Row>
           </Container>
         </section> */}
-        
       </div>
     );
   }

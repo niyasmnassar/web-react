@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.css";
-import "./dist/css/style.css";
+import "./dist/scss/style.scss";
 import App from "./App";
 import SetAuth from "./component/SetAuth/SetAuth";
 import * as serviceWorker from "./serviceWorker";

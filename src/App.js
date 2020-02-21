@@ -5,7 +5,6 @@ import About from "./component/About";
 import Ourworks from "./component/Ourworks";
 import Services from "./component/Services";
 import Mynav from "./component/main-menu/Mynav";
-import Footer from "./component/Footer";
 import Contactus from "./component/Contactus";
 
 class App extends Component {
@@ -18,7 +17,6 @@ class App extends Component {
         <Route path="/ourworks" component={Ourworks} />
         <Route path="/services" component={Services} />
         <Route path="/contactus" component={Contactus} />
-        <Footer />
       </Router>
     );
   }
